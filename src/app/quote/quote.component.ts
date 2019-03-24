@@ -16,6 +16,7 @@ export class QuoteComponent implements OnInit {
       new Quote(6, 'Plot my world domination plan','Cause I am an evil overlord',new Date(2017,3,28)),
 
   ]
+  showDescription= false;
   deleteQuote(isComplete,index){
     if (isComplete){
 
@@ -27,10 +28,10 @@ export class QuoteComponent implements OnInit {
         
         }
         }
-        toogleDetails(index){
-          this.quotes[index].showDescription = !this.quotes[index].showDescription;
+        toogleQuote(){
+          // this.quotes[index].showDescription = !this.quotes[index].showDescription;
+          this.showDescription =! this.showDescription;
       }
-      constructor() { }
 
  ngOnInit() {
  }
