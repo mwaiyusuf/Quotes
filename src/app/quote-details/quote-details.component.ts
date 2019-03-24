@@ -1,6 +1,6 @@
-import { Component, OnInit,Input, Output} from '@angular/core';
+import { Component, OnInit,Input, Output,EventEmitter} from '@angular/core';
 import {Quote} from '../quote'
-import { EventEmitter } from 'protractor';
+// import { EventEmitter } from 'protractor';
 @Component({
   selector: 'app-quote-details',
   templateUrl: './quote-details.component.html',

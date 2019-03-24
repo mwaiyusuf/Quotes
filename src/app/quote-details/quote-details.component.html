@@ -1,5 +1,11 @@
-<p>
-  {{quote.description}}
-</p>
-p>This goal will be completed in {{goal.completeDate|dateCount}} days</p>
-<button  class="btn btn-danger" (click) = 'quoteDelete(true)'> Delete Quote </button>
+<div class="row">
+  <div class="col-4">
+<p>{{quote.description}}</p>
+</div>
+<div class="col-4">
+<p>This quote will be completed in {{quote.completeDate|dateCount}} days</p>
+</div>
+<div class="col-4">
+<button class="btn btn-danger" (click) = 'quoteDelete(true)'>Delete Quote</button>
+</div>
+</div>
