@@ -2,9 +2,9 @@
 <hr>
 <ol>
   <div *ngFor='let quote of quotes; let i=index'>
-    <li >{{quote.name}}</li>
+    <li >  {{quote.name}} due on {{quote.completeDate | date}}</li>
     <button  (click)='toogleDetails(i)'>Toogle Details</button>
-    <app-quote-details *ngIf="quote.showDescription" [quote]='quote'(isComplete)='completeQuote($event,i)' ></app-quote-details>
+    <app-quote-details *ngIf="quote.showDescription" [quote]='quote'(isComplete)='deleteQuote($event,i)' ></app-quote-details>
     </div>
 </ol>
 <p *ngIf='quotes.length > 5'>You have too many quotes</p>
