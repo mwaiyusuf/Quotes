@@ -20,7 +20,7 @@ import { UpDownVoteComponent } from './up-down-vote/up-down-vote.component';
   ],
   imports: [
     BrowserModule,
-    FormsMOdule,
+    FormsModule,
     AppRoutingModule
   ],
   providers: [],

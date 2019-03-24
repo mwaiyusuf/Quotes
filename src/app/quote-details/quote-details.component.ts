@@ -1,5 +1,5 @@
 import { Component, OnInit,Input, Output,EventEmitter} from '@angular/core';
-import {Quote} from '../quote'
+import {Quote} from '../Quote'
 // import { EventEmitter } from 'protractor';
 @Component({
   selector: 'app-quote-details',
