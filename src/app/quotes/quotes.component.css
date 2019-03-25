@@ -13,3 +13,7 @@ p{
     color: red;
     font-size: 110px;
 }
+.col-md-7{
+    padding-left: 10%;
+    font-family: 'K2D', sans-serif;
+}

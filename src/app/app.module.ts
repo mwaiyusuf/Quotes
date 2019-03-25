@@ -1,29 +1,24 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import {FormsModule} from '@angular/forms';
-import { AppRoutingModule } from './app-routing.module';
+import { FormsModule } from '@angular/forms';
+
 import { AppComponent } from './app.component';
-import { QuoteComponent } from './quote/quote.component';
-import { QuoteDetailsComponent } from './quote-details/quote-details.component';
-import { AngularFontAwesomeModule } from 'angular-font-awesome';
-import { DateCountPipe } from './date-count.pipe';
-import { QuoteFormComponent } from './quote-form/quote-form.component';
-import { UpDownVoteComponent } from './up-down-vote/up-down-vote.component';
+import { FormsComponent } from './forms/forms.component';
+import { QuotesComponent } from './quotes/quotes.component';
+import { DetailsComponent } from './details/details.component';
+import { CountPipePipe } from './count-pipe.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
-    QuoteComponent,
-    QuoteDetailsComponent,
-    DateCountPipe,
-    QuoteFormComponent,
-    UpDownVoteComponent
+    FormsComponent,
+    QuotesComponent,
+    DetailsComponent,
+    CountPipePipe,
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    AngularFontAwesomeModule,
-    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
