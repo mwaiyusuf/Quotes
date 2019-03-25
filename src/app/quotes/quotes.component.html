@@ -9,17 +9,15 @@
     <div class="col-md-7">
       <br>
       <br>
-      <br>
-      <br>
-      <br>
       <div class="display-quotes" *ngFor='let quote of quotes, let i = index'>
+        <cite>--{{quote.author}}</cite>
         <blockquote>
-          <h4 class="style">{{quote.enterQuote}}<br> <br>  due on <br> {{quote.submitDate | date}}</h4>
+          <h4 class="style">{{quote.enterQuote}}<br>  Date Created <br> {{quote.submitDate | date}}</h4>
         </blockquote>
         <div class="details">
-          <cite>--{{quote.author}}</cite>
-          <br>
-          <button class="btn-info" (click)='toggleDetails(i)' type="button" name="button">More</button>
+
+
+          <button class="btn btn-primary" (click)='toggleDetails(i)' type="button" name="button">More Details</button>
           <br>
           <app-details *ngIf="quote.showDetails" [quote]='quote' (isDelete)='deleteQuote($event, i)' (isPlus)='plusVote($event, i)'
             (isMinus)='minusVote($event, i)'> </app-details>
@@ -27,4 +25,3 @@
       </div>
     </div>
   </div>
-</div>

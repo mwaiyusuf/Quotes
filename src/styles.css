@@ -1,2 +1,14 @@
-/* You can add global styles to this file, and also import other style files */
-@import "~bootstrap/dist/css/bootstrap.css"
+body {
+ background-image: url("https://images.unsplash.com/photo-1476820865390-c52aeebb9891?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80");
+ color: white;
+ font-family: 'Playfair Display', serif;
+ font-size: 20px;
+}
+.intro{
+  margin-left: 100px;
+  font-size: 30px;
+  color:white;
+}
+.btnsize{
+  margin: 20px;
+}
