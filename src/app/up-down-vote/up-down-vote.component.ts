@@ -1,5 +1,5 @@
 import { Component, OnInit,Output,EventEmitter} from '@angular/core';
-import {Quote} from '../Quote'
+// import {Quote} from '../Quote'
 @Component({
   selector: 'app-up-down-vote',
   templateUrl: './up-down-vote.component.html',

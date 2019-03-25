@@ -14,11 +14,11 @@
         </div>
         
         <div  >
-            <p id="{{i}}" strikeThrough>{{quote.description}}</p>
+            <p id="{{i}}"  >{{quote.description}}</p>
         <!-- <app-quote-details  [quote]='quote' (isComplete)= 'deleteQuote($event,i)'></app-quote-details> -->
     </div>
     <div *ngIf="showDescription">
-        <p><app-vote></app-vote></p>
+        <p><app-up-down-vote></app-up-down-vote></p>
     </div>
     <div>
         <p>Submitted by {{quote.submitter}}, {{quote.completeDate|dateCount}} days ago</p>
@@ -30,4 +30,4 @@
 
 </div>
 
-<p *ngIf='quotes.length > 5'>You have too many goals</p>
+ 

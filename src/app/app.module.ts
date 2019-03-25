@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { QuoteComponent } from './quote/quote.component';
 import { QuoteDetailsComponent } from './quote-details/quote-details.component';
+import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import { DateCountPipe } from './date-count.pipe';
 import { QuoteFormComponent } from './quote-form/quote-form.component';
 import { UpDownVoteComponent } from './up-down-vote/up-down-vote.component';
@@ -21,6 +22,7 @@ import { UpDownVoteComponent } from './up-down-vote/up-down-vote.component';
   imports: [
     BrowserModule,
     FormsModule,
+    AngularFontAwesomeModule,
     AppRoutingModule
   ],
   providers: [],
