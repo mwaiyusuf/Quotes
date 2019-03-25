@@ -25,7 +25,7 @@ export class QuotesComponent implements OnInit {
   }
   addNewQuote(quote){
     if (quote.enterQuote == "" || quote.author == "" || quote.submitter == "") {
-    alert("Empty field");
+    alert("Enter an input please!!!");
   }
   else {
     let quoteLength = this.quotes.length;
