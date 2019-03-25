@@ -9,7 +9,7 @@ export class QuotesComponent implements OnInit {
 
   quotes = [
     new Quote(1, "I have the keys to the streets", "Jemo",0, 0, "Kevin Hart"),
-    new Quote(2, "Look back at it", "Nelson", 0, 0,"Harry kane")
+    new Quote(2, "Never give up", "Nelson", 0, 0,"Harry kane")
   ]
   toggleDetails(index) {
     this.quotes[index].showDetails = !this.quotes[index].showDetails;
