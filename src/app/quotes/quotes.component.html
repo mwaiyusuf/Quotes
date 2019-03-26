@@ -17,7 +17,7 @@
         <div class="details">
 
 
-          <button class="btn btn-primary" (click)='toggleDetails(i)' type="button" name="button"> Details</button>
+          <button style="margin-bottom: 30px" class="btn btn-primary" (click)='toggleDetails(i)' type="button" name="button"> Details</button>
           <br>
           <app-details *ngIf="quote.showDetails" [quote]='quote' (isDelete)='deleteQuote($event, i)' (isPlus)='plusVote($event, i)'
             (isMinus)='minusVote($event, i)'> </app-details>
