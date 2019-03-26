@@ -12,7 +12,7 @@
       <div class="display-quotes" *ngFor='let quote of quotes, let i = index'>
         <cite>--{{quote.author}}</cite>
         <blockquote>
-          <h4 class="style">{{quote.enterQuote}}<br>  Date Created  {{quote.submitDate | date}}</h4>
+          <h4 class="style"><span style="color: #26c6da">"{{quote.enterQuote}}"</span><br>  Date Created  {{quote.submitDate | date}}</h4>
         </blockquote>
         <div class="details">
 
