@@ -23,6 +23,36 @@ webpackEmptyAsyncContext.id = "./src/$$_lazy_route_resource lazy recursive";
 
 /***/ }),
 
+/***/ "./src/app/app-highlight.directive.ts":
+/*!********************************************!*\
+  !*** ./src/app/app-highlight.directive.ts ***!
+  \********************************************/
+/*! exports provided: AppHighlightDirective */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AppHighlightDirective", function() { return AppHighlightDirective; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+
+
+var AppHighlightDirective = /** @class */ (function () {
+    function AppHighlightDirective() {
+    }
+    AppHighlightDirective = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Directive"])({
+            selector: '[appAppHighlight]'
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
+    ], AppHighlightDirective);
+    return AppHighlightDirective;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/app/app.component.css":
 /*!***********************************!*\
   !*** ./src/app/app.component.css ***!
@@ -95,6 +125,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _quotes_quotes_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./quotes/quotes.component */ "./src/app/quotes/quotes.component.ts");
 /* harmony import */ var _details_details_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./details/details.component */ "./src/app/details/details.component.ts");
 /* harmony import */ var _count_pipe_pipe__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./count-pipe.pipe */ "./src/app/count-pipe.pipe.ts");
+/* harmony import */ var _app_highlight_directive__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./app-highlight.directive */ "./src/app/app-highlight.directive.ts");
+
 
 
 
@@ -115,6 +147,7 @@ var AppModule = /** @class */ (function () {
                 _quotes_quotes_component__WEBPACK_IMPORTED_MODULE_6__["QuotesComponent"],
                 _details_details_component__WEBPACK_IMPORTED_MODULE_7__["DetailsComponent"],
                 _count_pipe_pipe__WEBPACK_IMPORTED_MODULE_8__["CountPipePipe"],
+                _app_highlight_directive__WEBPACK_IMPORTED_MODULE_9__["AppHighlightDirective"],
             ],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
@@ -201,7 +234,7 @@ module.exports = "/*!\n * Bootstrap v4.3.1 (https://getbootstrap.com/)\n * Copyr
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"display-details\">\n<p> Submited by : {{quote.submitter}} </p>\n<button id=\"butt\" class=\"btn btn-primary btnsize\" (click)='votePlus(true)' type=\"button\" name=\"button\">upVote: {{quote.upVote}}</button>\n<button id=\"butt\" class=\"btn btn-primary btnsize\" (click)='voteMinus(true)' type=\"button\" name=\"button\">downVote: {{quote.downVote}}</button>\n<button id=\"butt\" class=\"btn btn-danger btnsize\" (click)='quoteDelete(true)' type=\"button\" name=\"button\">Delete</button>\n</div>\n"
+module.exports = "<div class=\"display-details\">\n<p> Submited by : {{quote.submitter}} </p>\n<button id=\"butt\" class=\"btn btn-primary btnsize\" (click)='votePlus(true)' type=\"button\" name=\"button\"><img src=\"https://image.flaticon.com/icons/svg/25/25423.svg\" alt=\"\"width=\"20px\" height=\"20px\"> {{quote.upVote}} </button>\n<button id=\"butt\" class=\"btn btn-primary btnsize\" (click)='voteMinus(true)' type=\"button\" name=\"button\"> <img src=\"https://image.flaticon.com/icons/svg/25/25395.svg\" alt=\"\" width=\"20px\" height=\"20px\"> {{quote.downVote}}</button>\n<button id=\"butt\" class=\"btn btn-danger btnsize\" (click)='quoteDelete(true)' type=\"button\" name=\"button\"><img src=\"https://image.flaticon.com/icons/svg/39/39220.svg\" alt=\"\" width=\"30px\" height=\"30px\">Delete</button>\n</div>\n"
 
 /***/ }),
 
@@ -287,7 +320,7 @@ module.exports = "/*!\n * Bootstrap v4.3.1 (https://getbootstrap.com/)\n * Copyr
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"intro\">\n  <h1>Create Quotes</h1>\n</div>\n\n<form class=\"myform\" #quoteForm=\"ngForm\" (ngSubmit)=\"saveQuote()\">\n\n    <div class=\"panel panel-primary\">\n        <div class=\"panel-heading\">\n            <h3 class=\"panel-title\"></h3>\n        </div>\n        <div class=\"form-group\">\n            <label for=\"author\">Author</label>\n            <input type=\"text\" class=\"form-control\" [(ngModel)]=\"newQuote.author\" name=\"author\"  #author=\"ngModel\"\n                required>\n        </div>\n        <div class=\"form-group\">\n            <label for=\"submitter\">Submitter</label>\n            <input type=\"text\" class=\"form-control\" name=\"submitter\" [(ngModel)]=\"newQuote.submitter\" #submitter=\"ngModel\">\n        </div>\n        <div class=\"form-group\">\n            <label for=\"enterquote\">Enter Quote</label>\n            <textarea class=\"form-control\" type=\"text\" [(ngModel)]=\"newQuote.enterQuote\" name=\"enterQuote\" #enterquote=\"ngModel\" rows=\"10\"></textarea>\n        </div>\n        <button type=\"submit\" class=\"btn btn-primary\">Save Quote</button>\n        <br>\n        <br>\n        <br>\n    </div>\n</form>\n"
+module.exports = "<div class=\"intro\">\n  <h1>Create Quotes</h1>\n</div>\n\n<form class=\"myform\" #quoteForm=\"ngForm\" (ngSubmit)=\"saveQuote()\">\n\n    <div class=\"panel panel-primary\">\n        <div class=\"panel-heading\">\n            <h3 class=\"panel-title\"></h3>\n        </div>\n        <div class=\"form-group\">\n            <label for=\"author\">Author</label>\n            <input style=\"color:#4fc3f7\" type=\"text\" class=\"form-control\" [(ngModel)]=\"newQuote.author\" name=\"author\"  #author=\"ngModel\"\n                required>\n        </div>\n        <div class=\"form-group\">\n            <label for=\"submitter\">Submitter</label>\n            <input style=\"color:#4fc3f7\" type=\"text\" class=\"form-control\" name=\"submitter\" [(ngModel)]=\"newQuote.submitter\" #submitter=\"ngModel\">\n        </div>\n        <div class=\"form-group\">\n            <label for=\"enterquote\">Enter Quote</label>\n            <textarea  style=\"color:#4fc3f7\"class=\"form-control\" type=\"text\" [(ngModel)]=\"newQuote.enterQuote\" name=\"enterQuote\" #enterquote=\"ngModel\" rows=\"10\"></textarea>\n        </div>\n        <button type=\"submit\" class=\"btn btn-primary\">Save Quote</button>\n        <br>\n        <br>\n        <br>\n    </div>\n</form>\n"
 
 /***/ }),
 
@@ -382,7 +415,7 @@ module.exports = "/*!\n * Bootstrap v4.3.1 (https://getbootstrap.com/)\n * Copyr
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<link href=\"https://fonts.googleapis.com/css?family=Chakra+Petch\" rel=\"stylesheet\">\n<link href=\"https://fonts.googleapis.com/css?family=K2D\" rel=\"stylesheet\">\n<div class=\"container-fluid\">\n  <hr width=\"80%\">\n  <div class=\"row\">\n    <div class=\"col-md-5\">\n      <app-forms (addQuote)=\"addNewQuote($event)\"></app-forms>\n    </div>\n    <div class=\"col-md-7\">\n      <br>\n      <br>\n      <div class=\"display-quotes\" *ngFor='let quote of quotes, let i = index'>\n        <cite>--{{quote.author}}</cite>\n        <blockquote>\n          <h4 class=\"style\">{{quote.enterQuote}}<br>  Date Created <br> {{quote.submitDate | date}}</h4>\n        </blockquote>\n        <div class=\"details\">\n\n\n          <button class=\"btn btn-primary\" (click)='toggleDetails(i)' type=\"button\" name=\"button\">More Details</button>\n          <br>\n          <app-details *ngIf=\"quote.showDetails\" [quote]='quote' (isDelete)='deleteQuote($event, i)' (isPlus)='plusVote($event, i)'\n            (isMinus)='minusVote($event, i)'> </app-details>\n        </div>\n      </div>\n    </div>\n  </div>\n"
+module.exports = "<link href=\"https://fonts.googleapis.com/css?family=Chakra+Petch\" rel=\"stylesheet\">\n<link href=\"https://fonts.googleapis.com/css?family=K2D\" rel=\"stylesheet\">\n<div class=\"container-fluid\">\n  <hr width=\"80%\">\n  <div class=\"row\">\n    <div class=\"col-md-5\">\n      <app-forms (addQuote)=\"addNewQuote($event)\"></app-forms>\n    </div>\n    <div class=\"col-md-7\">\n      <br>\n      <br>\n      <div class=\"display-quotes\" *ngFor='let quote of quotes, let i = index'>\n        <cite>--{{quote.author}}</cite>\n        <blockquote>\n          <h4 class=\"style\"><span style=\"color: #26c6da\">\"{{quote.enterQuote}}\"</span><br>  Date Created  {{quote.submitDate | date}}</h4>\n        </blockquote>\n        <div class=\"details\">\n\n\n          <button style=\"margin-bottom: 30px\" class=\"btn btn-primary\" (click)='toggleDetails(i)' type=\"button\" name=\"button\"> Details</button>\n          <br>\n          <app-details *ngIf=\"quote.showDetails\" [quote]='quote' (isDelete)='deleteQuote($event, i)' (isPlus)='plusVote($event, i)'\n            (isMinus)='minusVote($event, i)'> </app-details>\n        </div>\n      </div>\n    </div>\n  </div>\n"
 
 /***/ }),
 
@@ -422,7 +455,7 @@ var QuotesComponent = /** @class */ (function () {
     };
     QuotesComponent.prototype.addNewQuote = function (quote) {
         if (quote.enterQuote == "" || quote.author == "" || quote.submitter == "") {
-            alert("Empty field");
+            alert("Enter an input please!!!");
         }
         else {
             var quoteLength = this.quotes.length;
