@@ -7,11 +7,11 @@
       <app-forms (addQuote)="addNewQuote($event)"></app-forms>
     </div>
     <div class="col-md-7">
-      <br> 
+      <br>
       <br>
       <div class="display-quotes" *ngFor='let quote of quotes, let i = index'>
         <cite>--{{quote.author}}</cite>
-        <blockquote>
+        <blockquote> 
           <h4 class="style"><span style="color: #26c6da">"{{quote.enterQuote}}"</span><br>  Date Created  {{quote.submitDate | date}}</h4>
         </blockquote>
         <div class="details">
